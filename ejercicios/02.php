@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        define('SIZE', 8);
+
+        for($tabla = 1; $tabla <= 10; $tabla++){
+            echo $tabla * SIZE;
+            echo "<br>";
+        }
+    ?>
 
 </body>
 </html>
