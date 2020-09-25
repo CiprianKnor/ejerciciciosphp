@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+        
     <?php
         for($i=1 ; $i <= 169; $i++){
             if(169 % $i != 0){
@@ -16,7 +17,8 @@
                 echo "El numero" . $i  . " es primo";
                 echo "<br>";
             }
-        }
+        } 
     ?>
+
 </body>
 </html>
