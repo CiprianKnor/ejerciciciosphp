@@ -7,13 +7,10 @@
 </head>
 <body>
 <?php
-        $array1 = ["lakers", "chicago bulls", "Hoonigan", "Mitsubishi" , "Nissan"];
-    ?>
-
-    <ul>
-         <?php foreach ($array1 as $element){
-    echo '<li>' . $element . '</li>';
+        $array1 = ["Espania", "Rumania", "Dinamarca", "Japon"];
+        
+        foreach ($array1 as $element){
+        echo $element . "</br>";
 } ?>
-    </ul>
 </body>
 </html>
