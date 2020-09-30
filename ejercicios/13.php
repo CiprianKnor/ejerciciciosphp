@@ -6,10 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="12action.php" method="post">
-        Nombre: <input type="text" name="nombre" required><br>
+<form action="13action.php" method="post">
+        Nombre: <input type="text" name="nombre" minlength="3" required><br>
         <input type="submit" value="Enviar">
     </form>
-
 </body>
 </html>
