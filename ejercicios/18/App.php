@@ -18,18 +18,13 @@ class app
         $this->$method();
     }
 
-    public function login()
-    {
-        include('views/index.php');
-    }
-
     public function auth()
     {
         $nombre = $_POST['nombre'];
-        $password = $_POST['password'];
+        $apellidos = $_POST['apellidos'];
 
         setcookie("nombre", $nombre, time() + 3600);
-        setcookie("password", $password, time() + 3600);
+        setcookie("apellidos", $apellidos, time() + 3600);
 
 
         header("location: index.php?method=home");
@@ -38,31 +33,38 @@ class app
     {
 
         include('views/home.php');
+
+        //echo "  $vaina  <br> ";
     }
 
     public function logout()
     {
         $nombre = $_POST['nombre'];
-        $password = $_POST['password'];
+        $apellidos = $_POST['apellidos'];
         setcookie("nombre", $nombre, time() - 1);
-        setcookie("password", $password, time() - 1);
+        setcookie("apellidos", $apellidos, time() - 1);
         header("location: index.php?method=login");
+    }
+
+    public function login()
+    {
+        include('views/index.php');
     }
 
 
 
 
-    // public function index()
-    // {
-    //     if (isset($_COOKIE)) {
-    //         $user = $_COOKIE['user'];
-    //         $nombre = unserialize($_COOKIE['nombre']);
-    //         $apellido = unserialize($_COOKIE['apellido']);
-    //         $nombre2 = json_decode($_COOKIE['nombre2']);
-    //         $apellido2 = json_decode($_COOKIE['apellido2']);
-    //     }
+    public function index()
+    {
+        if (isset($_COOKIE)) {
+            $user = $_COOKIE['user'];
+            $nombre = unserialize($_COOKIE['nombre']);
+            $apellido = unserialize($_COOKIE['apellido']);
+            $nombre2 = json_decode($_COOKIE['nombre2']);
+            $apellido2 = json_decode($_COOKIE['apellido2']);
+        }
 
-    //     // echo "Estamos en el index<br>";
-    //     include('views/index.php');
-    // }
+        // echo "Estamos en el index<br>";
+        include('views/index.php');
+    }
 }
