@@ -7,17 +7,40 @@
 </head>
 <body>
 
-  <h2>Sesion</h2>
+<h1>Bienvenido <?= $_COOKIE['nombre'] ?></h1>
 
+  <h2>Lista de deseos</h2>
+  <h4><a href="?method=empty">Vaciar lista de deseos</a></h4>
+  <h4><a href="?method=cerrar">Cerrar sesión</a></h4>
   <ul>
+    <pre>
   <?php 
-    foreach ($_SESSION as $cosa) {
-      echo "<li> $cosa </li>";
+  // var_dump($deseos);
+  // exit();
+  foreach ($_SESSION as $cosa) {
+    echo "<li> $cosa </li>";
+  }
+
+  if (count($deseos)) {
+    foreach ($deseos as $id => $deseo) {
+      echo "<li> Deseo nº $id: " . $deseo . ' <a href="?method=delete&id=' . $id . '"> borrar</a> </li>';
     }
+  } else {
+    echo "No hay deseos todavía";
+  }
   ?>
   </ul>
+  
+  <hr>
+  <h2>Alta de nuevos deseos</h2>
+  <form action="?method=new" method="post">
+    <label for="new">Nuevo deseo</label>
+    <input type="text" name="new">
+    
+    <input type="submit" value="nuevo">
+  </form>
 
   <a href="index.php?method=logout">Salir</a>
   
 </body>
-</html>
+</html> 
