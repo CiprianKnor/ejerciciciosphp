@@ -11,7 +11,6 @@
 
   <h2>Lista de deseos</h2>
   <h4><a href="?method=empty">Vaciar lista de deseos</a></h4>
-  <h4><a href="?method=cerrar">Cerrar sesión</a></h4>
   <ul>
     <pre>
   <?php 
