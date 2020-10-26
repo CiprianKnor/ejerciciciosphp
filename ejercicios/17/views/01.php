@@ -6,9 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="13action.php" method="post">
-        Nombre: <input type="text" name="nombre" minlength="3" required><br>
-        <input type="submit" value="Enviar">
-    </form>
+    <ul>
+            <?php foreach($lista as $fibonacci){
+                echo "<li>" , $fibonacci , "</li>";
+            }?>
+    </ul>
 </body>
 </html>

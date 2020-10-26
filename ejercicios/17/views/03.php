@@ -6,9 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="13action.php" method="post">
-        Nombre: <input type="text" name="nombre" minlength="3" required><br>
-        <input type="submit" value="Enviar">
-    </form>
+    <ul>
+        <?php
+            foreach ($primos as $primo) {
+            echo "<li>" , $primo , "</li>"    ;
+            }
+        ?>
+    </ul>
 </body>
 </html>

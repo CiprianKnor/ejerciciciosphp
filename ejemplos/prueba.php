@@ -6,9 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="13action.php" method="post">
-        Nombre: <input type="text" name="nombre" minlength="3" required><br>
-        <input type="submit" value="Enviar">
-    </form>
+    prueba reenvio
+    <a href="direccion1.php">direccion 1</a>
 </body>
 </html>
